@@ -9,9 +9,13 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+/assets
 
 # testing
 /coverage
+
+# files
+SkillsCard.tsx
 
 # next.js
 /.next/
