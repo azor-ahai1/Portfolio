@@ -76,11 +76,8 @@ const AboutSection = () => {
             </div>
 
             <div className="w-full mt-4 backdrop-blur-sm  p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
-              <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed mb-4 
-                first-letter:text-4xl first-letter:font-bold first-letter:mr-1 first-letter:float-left first-letter:text-pink-500">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, ad nisi! Sint voluptas deleniti 
-                mollitia reprehenderit tempore animi fuga possimus, iste facilis quas excepturi repellat magni, 
-                velit sequi molestiae non.
+              <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed mb-4">
+                I&apos;m Aashish Shukla — a full-stack developer with a passion for building innovative software solutions and dynamic web applications.  I enjoy turning complex problems into clean, efficient code and continuously sharpen my skills to stay at the forefront of modern development.
               </p>
             </div>
             <CodingProfiles />
