@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 
 interface ProjectData {
@@ -32,12 +33,11 @@ const CarouselControl = ({ type, title, handleClick }: CarouselControlProps) => 
 
 interface ProjectCardProps {
   project: ProjectData;
-  index: number;
   isCenter: boolean;
   onHover: (hovering: boolean) => void;
 }
 
-const ProjectCard = ({ project, index, isCenter, onHover }: ProjectCardProps) => {
+const ProjectCard = ({ project, isCenter, onHover }: ProjectCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const xRef = useRef(0);
   const yRef = useRef(0);
@@ -101,12 +101,13 @@ const ProjectCard = ({ project, index, isCenter, onHover }: ProjectCardProps) =>
       }}
     >
       <div className="relative w-full h-full overflow-hidden">
-        <img
-          className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
+        <Image
+          className="object-cover transition-all duration-300 hover:scale-105"
           alt={project.title}
           src={project.src}
           loading="eager"
           decoding="sync"
+          fill
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
       </div>
@@ -192,7 +193,6 @@ export function InfiniteProjectCarousel({
               >
                 <ProjectCard
                   project={project}
-                  index={index}
                   isCenter={isCenter}
                   onHover={handleCardHover}
                 />

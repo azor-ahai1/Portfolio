@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { SparklesText } from "./ui/sparkles-text";
 import { cn } from "@/utils/cn";
-import { InteractiveHoverButton } from './ui/interactive-hover-button';
 
 const Contact_Info = [
   {
@@ -87,7 +86,7 @@ const Contact: React.FC = () => {
               </SparklesText>
             </div>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-6">
-              Feel free to reach out through any of these platforms. I'm always open to discussing new projects, opportunities, or collaborations.
+              Feel free to reach out through any of these platforms. I&apos;m always open to discussing new projects, opportunities, or collaborations.
             </p>
           </div>
           

@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
-import { cn } from "@/utils/cn";
-import Link from "next/link";
 import { IconHome, IconUser, IconDeviceLaptop, IconAddressBook} from "@tabler/icons-react";
 
 function Navbar(){

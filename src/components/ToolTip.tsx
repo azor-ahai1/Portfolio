@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence, useMotionValue, useSpring, MotionValue } from "framer-motion";
+import { motion, AnimatePresence, useSpring, MotionValue } from "framer-motion";
 import { useTransform } from "framer-motion";
 
 // Separate Tooltip component

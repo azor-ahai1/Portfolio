@@ -25,7 +25,7 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      // let direction = current! - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
       } else {
@@ -63,6 +63,7 @@ export const FloatingNav = ({
       >
         {navItems.map((navItem, idx) => (
           <div
+            key={navItem.section || idx}
             onClick={() => scrollToSection(navItem.section)}
             className="flex items-center justify-center space-x-1 mx-4 relative"
           >
