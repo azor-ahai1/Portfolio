@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { WebDevList } from "./WebDevList";
 import { LanguagesList } from "./LanguagesList";
@@ -8,16 +8,15 @@ import mepic from "../../public/mepic.png";
 import { BackgroundBeams } from "./ui/background-beams";
 import { motion } from "framer-motion";
 import { CodingProfiles } from "./CodingProfiles";
+import { SparklesText } from "./ui/sparkles-text";
 
-const AboutSection = () => {
-  const [isHeadingHovered, setIsHeadingHovered] = useState(false);
-  
+const AboutSection = () => {  
   return (
     <section className="pt-4 pb-24 relative overflow-hidden" id="about">
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-black/5 backdrop-blur-sm z-0" />
       
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-pink-300/20 to-purple-300/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-300/20 to-teal-300/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+      {/* <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-pink-300/20 to-purple-300/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-300/20 to-teal-300/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" /> */}
       
 
       <div className="container mx-auto px-6 md:px-8 relative z-10 mt-8 pt-8 border-t border-white/10 backdrop-blur-[2px]">
@@ -30,13 +29,13 @@ const AboutSection = () => {
         >
           <div 
             className="relative inline-block"
-            onMouseEnter={() => setIsHeadingHovered(true)}
-            onMouseLeave={() => setIsHeadingHovered(false)}
           >
-            <h2 className="text-5xl font-bold font-inter mb-4 mt-4 dark:text-amber-100 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              About Me
-            </h2>
-            <div className="absolute bottom-0 left-0 w-full h-1 overflow-hidden">
+            <SparklesText>
+              <h2 className="font-cairoplay text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-600">
+                About Me
+              </h2>
+            </SparklesText>
+            {/* <div className="absolute bottom-0 left-0 w-full h-1 overflow-hidden">
               <div 
                 className={`h-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full transition-transform duration-500 ease-out ${
                   isHeadingHovered ? "scale-x-120" : "scale-x-50"
@@ -45,7 +44,7 @@ const AboutSection = () => {
                   transformOrigin: "center" 
                 }}
               />
-            </div>
+            </div> */}
           </div>
         </motion.div>
         

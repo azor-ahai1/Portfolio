@@ -14,7 +14,7 @@ const Contact_Info = [
   {
     platform: "LinkedIn",
     icon: <FaLinkedin size={24} />,
-    link: "https://linkedin.com/in/your-profile",
+    link: "https://linkedin.com/in/aashish-shukla",
     id: "aashish-shukla"
   },
   {
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
           <div className="text-center mb-16">
             <div className="mb-4">
               <SparklesText>
-                <span className="font-cairoplay text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
+                <span className="font-cairoplay text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-600">
                   Get In Touch
                 </span>
               </SparklesText>

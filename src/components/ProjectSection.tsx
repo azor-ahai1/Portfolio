@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "./ui/background-beams";
 import { InfiniteProjectCarousel } from "./ui/infinite-carousel";
+import { SparklesText } from "./ui/sparkles-text";
 
 const projectsData = [
   {
@@ -57,7 +58,6 @@ const projectsData = [
 ];
 
 const ProjectSection = () => {
-  const [isHeadingHovered, setIsHeadingHovered] = useState(false);
   
   return (
     <section className="pt-4 relative overflow-hidden" id="projects">
@@ -72,13 +72,13 @@ const ProjectSection = () => {
         >
           <div 
             className="relative inline-block"
-            onMouseEnter={() => setIsHeadingHovered(true)}
-            onMouseLeave={() => setIsHeadingHovered(false)}
           >
-            <h2 className="text-5xl font-bold font-inter mb-4 mt-4 dark:text-amber-100 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              My Projects
-            </h2>
-            <div className="absolute bottom-0 left-0 w-full h-1 overflow-hidden">
+            <SparklesText>
+              <h2 className="font-cairoplay text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-600">
+                My Projects
+              </h2>
+            </SparklesText>
+            {/* <div className="absolute bottom-0 left-0 w-full h-1 overflow-hidden">
               <div 
                 className={`h-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full transition-transform duration-500 ease-out ${
                   isHeadingHovered ? "scale-x-120" : "scale-x-50"
@@ -87,7 +87,7 @@ const ProjectSection = () => {
                   transformOrigin: "center" 
                 }}
               />
-            </div>
+            </div> */}
           </div>
         </motion.div>
 

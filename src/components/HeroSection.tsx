@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import IconCloud from "./ui/icon-cloud";
-import { SparklesText } from "./ui/sparkles-text";
 import { cn } from "@/utils/cn";
+import { BackgroundBeams } from "./ui/background-beams";
+import { AuroraText } from "./ui/aurora-text";
 
 // import { Poppins } from "next/font/google";
 
@@ -61,9 +62,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden" id="home">
+    <div className="relative h-screen bg-black w-full overflow-hidden" id="home">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10" />
         <video 
           autoPlay 
@@ -76,7 +77,7 @@ const HeroSection = () => {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/50 z-10" />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-20 flex items-center justify-center h-full px-4">
@@ -89,11 +90,9 @@ const HeroSection = () => {
           <div className="text-center md:text-left space-y-6">
             
             <div className="mb-4">
-              <SparklesText>
-                <span className={`font-cairoplay text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600`}>
+              <AuroraText className={`text-4xl md:text-5xl lg:text-6xl font-extrabold`} speed={10}>
                   Aashish Shukla
-                </span>
-              </SparklesText>
+              </AuroraText>
             </div>
             
             <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">
@@ -108,10 +107,10 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-pink-500/25 transition-all">
+              <button onClick={() => scrollToSection('projects')} className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-pink-500/25 transition-all">
                 View Projects
               </button>
-              <button className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition-all">
+              <button onClick={() => scrollToSection('contact')} className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition-all">
                 Contact Me
               </button>
             </div>
@@ -134,6 +133,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <BackgroundBeams/>
     </div>
   );
 };
